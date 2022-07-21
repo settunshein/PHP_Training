@@ -8,7 +8,7 @@ $current_age;
 if( isset($_POST['calculate']) ){
     $user_input   = $_POST['dob'];
     $current_date = date('Y-m-d');
-    if($user_input == $current_date){
+    if($user_input > $current_date){
         $_SESSION['msg'] = "Invalid Date of Birth.&nbsp;<i class='far fa-times-circle'></i>";
     }else{
         $current_age  = date('Y') - date('Y', strtotime($user_input));

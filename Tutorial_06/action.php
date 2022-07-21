@@ -9,12 +9,12 @@ if( isset($_POST['upload']) ){
 	$allowed     = ['jpg', 'jpeg', 'png'];
 	$ext         = pathinfo($file_name, PATHINFO_EXTENSION);
 
-	if( empty($folder_name) || $file_name == ""  || !in_array($ext, $allowed) ){
+	if( empty($folder_name) || empty($file_name)  || !in_array($ext, $allowed) ){
 		if( empty($folder_name) ){
 			$_SESSION['folder_name_err'] = 'Folder name field is required.';
 		}
 
-		if( $file_name == "" ){
+		if( empty($file_name) ){
 			$_SESSION['image_err'] = 'Image field is required.';
 		}else{
 			if( !in_array($ext, $allowed) ){

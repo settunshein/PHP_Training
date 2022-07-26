@@ -7,10 +7,10 @@ function createTable()
     $query = "CREATE TABLE IF NOT EXISTS tbl_students(
         id        INT(11) UNSIGNED PRIMARY KEY AUTO_INCREMENT,
         name      VARCHAR(255) NOT NULL,
-        email     VARCHAR(255) NULL,
-        language  TEXT NULL,
-        age       INT(11) NULL,
-        address   TEXT NULL,
+        email     VARCHAR(255) NOT NULL,
+        language  TEXT DEFAULT NULL,
+        age       INT(11) DEFAULT NULL,
+        address   TEXT DEFAULT NULL,
     );";
     mysqli_query($conn, $query);
 }

@@ -19,7 +19,7 @@
 		            	</div>
 		            	<div class="form-group">
 		            		<label for="image">Choose Your Image<b class="text-danger ml-1">*</b></label>
-		                	<input type="file" class="dropify" name="image" id="image">
+		                	<input type="file" class="dropify" name="image" id="image" data-max-file-size="1G">
 		                	<span class="text-danger err-msg"><?= $_SESSION['image_err'] ?? ""; ?></span>
 		            	</div>
 		            </div>

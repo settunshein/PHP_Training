@@ -190,7 +190,7 @@ function resetPassword()
                     $query2 = "DELETE FROM tbl_tokens WHERE token='$token' && email='$email'";
                     mysqli_query($conn, $query2);
 
-                    $_SESSION['error'] = "
+                    $_SESSION['success'] = "
                         <script>
                             toastr.success('Password Updated Successfully &nbsp;<i class=\"far fa-check-circle\"></i>', 'SUCCESS')
                         </script>
